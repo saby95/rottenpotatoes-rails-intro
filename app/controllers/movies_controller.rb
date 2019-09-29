@@ -26,6 +26,9 @@ class MoviesController < ApplicationController
     if @sorting == 'title'
           @movies = @movies.order(@sorting)
           @title_sort = 'hilite'
+    elsif @sorting == 'release_date'
+          @movies = @movies.order(@sorting)
+          @release_sort = 'hilite'
     end
     
   end

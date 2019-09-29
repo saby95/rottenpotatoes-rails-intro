@@ -15,12 +15,6 @@ class MoviesController < ApplicationController
     
     if params[:sort_by]
       @sorting = params[:sort_by]
-    else
-      @sorting = session[:sort_by]
-    end
-    
-    if @sorting!=session[:sort_by]
-      session[:sort_by] = @sorting
     end
     
     if @sorting == 'title'
